@@ -81,6 +81,6 @@ p{
     font-size:1.6em;
     clear: both;
 }
-#hold{
-    text-align: center;
-}
+body {
+    background: radial-gradient(circle, red, blue);
+  }

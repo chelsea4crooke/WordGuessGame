@@ -6,172 +6,67 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 
-</header>
-    <div class="card text-black">
-      <img src="wonderwomen.jpg" class="card-img" alt="superheroladies" height="350px">
-        <div class="card-img-overlay">
-          <h1 class="card-title">Can you guess the lady Superheroes?</h1>
+<!--Header Image/ Jumbo-->
+<div class="container-fluid">
+  <div class="row">
+     <div class="col-md-12" card text-black>
+       <img src="wonderwomen.jpg" class="card-img" alt="superheroladies" height="400px">
+         <div class="card-img-overlay">
+           <h1 class="card-title">Can you guess the lady Superheroes?</h1>
              <p>Use the alphabet below to guess the word, or click hint to get a clue. </p>
-        </div>
+      </div>
     </div>
+  </div>
+</div>  
+
+</header> 
     <body>
-    <div class="container">
+     <div class="container" id="here">
         <div class="row">
             <div class="col-lg-12">
                 &nbsp;
             </div>
+            <!--Letter Buttons for Guessing-->
             <div class="col-sm-12">
                 <div id="buttons">
                     <ul id="alphabet">
-                        <li id="letter">a</li>
-                        <li id="letter">b</li>
-                        <li id="letter">c</li>
-                        <li id="letter">d</li>
-                        <li id="letter">e</li>
-                        <li id="letter">f</li>
-                        <li id="letter">g</li>
-                        <li id="letter">h</li>
-                        <li id="letter">i</li>
-                        <li id="letter">j</li>
-                        <li id="letter">k</li>
-                        <li id="letter">l</li>
-                        <li id="letter">m</li>
-                        <li id="letter">n</li>
-                        <li id="letter">o</li>
-                        <li id="letter">p</li>
-                        <li id="letter">q</li>
-                        <li id="letter">r</li>
-                        <li id="letter">s</li>
-                        <li id="letter">t</li>
-                        <li id="letter">u</li>
-                        <li id="letter">v</li>
-                        <li id="letter">w</li>
-                        <li id="letter">x</li>
-                        <li id="letter">y</li>
-                        <li id="letter">z</li>
+                        <li class="letter" id="a">a</li>
+                        <li class="letter" id="b">b</li>   
+                        <li class="letter" id="c">c</li>                     
+                        <li class="letter" id="d">d</li>
+                        <li class="letter" id="e">e</li>
+                        <li class="letter" id="f">f</li>
+                        <li class="letter" id="g">g</li>
+                        <li class="letter" id="h">h</li>
+                        <li class="letter" id="i">i</li>
+                        <li class="letter" id="j">j</li>
+                        <li class="letter" id="k">k</li>
+                        <li class="letter" id="l">l</li>
+                        <li class="letter" id="m">m</li>
+                        <li class="letter" id="n">n</li>
+                        <li class="letter" id="o">o</li>
+                        <li class="letter" id="p">p</li>
+                        <li class="letter" id="q">q</li>
+                        <li class="letter" id="r">r</li>
+                        <li class="letter" id="s">s</li>
+                        <li class="letter" id="t">t</li>
+                        <li class="letter" id="u">u</li>
+                        <li class="letter" id="v">v</li>
+                        <li class="letter" id="w">w</li>
+                        <li class="letter" id="x">x</li>
+                        <li class="letter" id="y">y</li>
+                        <li class="letter" id="z">z</li>
                     </ul>
                 </div>  
             </div>
             <div class="col-md-12 mainbox">
                 <h1>Take a Guess:</h1>
-                <div id="hold">
-                    <ul id="my-word">
-                        <li class="guess">_</li>
-                        <li class="guess">_</li>
-                        <li class="guess">_</li>
-                        <li class="guess">_</li>
-                        <li class="guess">_</li>
-                        <li class="guess">_</li>
-                    </ul>
+                <div class="col-md-12" id="gameScreen">   
                 </div>
                 <h2>You have 14 lives left!</h2>
                 <h3>Wins:</h3>
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-
-var word = ["wonder woman", "captain marvel", "supergirl", "scarlet witch", "storm", "mystique", "black widow", "batgirl", "killer frost"]
-var wins= 0;
-var lives= 14;
-
-window.onload = function(){
-    var alphabet= ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-    var word ; //words in array to be guessed
-    var guess ; //user guesses
-    var guesses ; //stored guesses
-    var lives ; //lives left counter
-    var wins ; //wins counter
-    var space ; //# spaces in word marked by "_"
-
-    //get elements
-    var showLives= document.getElementById("myLives");
-    var showWins= document.getElementById("myWins");
-
-    //create alphabet ul
-    var buttons= function(){
-        myButtons= document.getElementById("buttons");
-        letters= document.createElement("ul");
-
-        for(var i = 0; i < alphabet.length; i++){
-            letters.id = "alphabet";
-            list= document.createElement("li");
-            list.id= "letters";
-            list.innerHTML= alphabet[i];
-            check();
-            myButtons.appendChild("letters");
-            letters.appendChild("list");
-        }
-    }
-    // create guesses
-    result= function(){
-        wordHolder= document.getElementById("hold");
-        correct= document.createElement("ul");
-
-        for(var i= 0; i < word.length; i++){
-            correct.setAttribute("id", "my-word");
-            guess= document.createElement("li");
-            guess.setAttribute("class", "guess");
-            if(word[i] === "_"){
-                guess.innerHTML= "_";
-                space = 1;
-            }else{
-                guess.innerHTML= "_";
-            }
-            guesses.push(guess);
-            wordHolder.appendChild(correct);
-            correct.appendChild(guess);
-        }
-    }
-    //show lives
-    comments = function(){
-        showLives.innerHTML = ("You have" + lives + "lives left!");
-        if(lives < 1){
-            showLives.innerHTML= ("Game Over!");
-        }
-        for(var i= 0; i < guesses.length; i++){
-            showLives.innerHTML= ("You Win!");
-        }
-    }
-    //onclick function
-    check= function(){
-        document.getElementById("letter").addEventListener("click");
-        function(letter){
-            document.getElementById("letter").innerHTML;
-        }
-            var guess= (this.innerHTML);
-            this.setAttribute("class", "active");
-            this.onclick= null;
-
-            for(var i = 0; i < word.length, i++;){
-                if(word[i].innerHTML= guess);
-                counter += 1;
-            }
-        }
-        var j= (word.indexOf(guess));
-        if(j === -1){
-            lives -= 1;
-            comments();
-        }else{
-            comments()
-        }
-    }
-    //play
-    play= function(){
-        word = ["wonder woman", "captain marvel", "supergirl", "scarlet witch", "storm", "mystique", "black widow", "batgirl", "killer frost"];
-        chosenWord= word[Math.floor(Math.random() * word.length)];
-        word= chosenWord[Math.floor(Math.random() * word.length)];
-        console.log(word);
-        buttons();
-        guesses= [];
-        lives= 14;
-        counter= 0;
-        space= 0; 
-        result ();
-        comments();
-        selectWord();
-    }
-    play(); 
-    // Could not get buttons to process the click, store it and add the clicked letter to the underscore portion.  
-</script>
-</body>
+    <script type="text/javascript" src="assets/javascript/game#3.js" ></script>
+    </body>
