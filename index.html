@@ -5,12 +5,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!--Header Image/ Jumbo-->
 <div class="container-fluid">
   <div class="row">
      <div class="col-md-12" card text-black>
-       <img src="wonderwomen.jpg" class="card-img" alt="superheroladies" height="400px">
+       <img src="wonderwomen.jpg" class="card-img" alt="superheroladies" height="450px">
          <div class="card-img-overlay">
            <h1 class="card-title">Can you guess the lady Superheroes?</h1>
              <p>Use the alphabet below to guess the word, or click hint to get a clue. </p>
@@ -18,55 +19,59 @@
     </div>
   </div>
 </div>  
+<!--Header End-->
 
 </header> 
     <body>
-     <div class="container" id="here">
+     <div class="container" id="gameBox">
         <div class="row">
             <div class="col-lg-12">
                 &nbsp;
             </div>
             <!--Letter Buttons for Guessing-->
-            <div class="col-sm-12">
+          <!--  <div class="col-sm-12">
                 <div id="buttons">
                     <ul id="alphabet">
-                        <li class="letter" id="a">a</li>
-                        <li class="letter" id="b">b</li>   
-                        <li class="letter" id="c">c</li>                     
-                        <li class="letter" id="d">d</li>
-                        <li class="letter" id="e">e</li>
-                        <li class="letter" id="f">f</li>
-                        <li class="letter" id="g">g</li>
-                        <li class="letter" id="h">h</li>
-                        <li class="letter" id="i">i</li>
-                        <li class="letter" id="j">j</li>
-                        <li class="letter" id="k">k</li>
-                        <li class="letter" id="l">l</li>
-                        <li class="letter" id="m">m</li>
-                        <li class="letter" id="n">n</li>
-                        <li class="letter" id="o">o</li>
-                        <li class="letter" id="p">p</li>
-                        <li class="letter" id="q">q</li>
-                        <li class="letter" id="r">r</li>
-                        <li class="letter" id="s">s</li>
-                        <li class="letter" id="t">t</li>
-                        <li class="letter" id="u">u</li>
-                        <li class="letter" id="v">v</li>
-                        <li class="letter" id="w">w</li>
-                        <li class="letter" id="x">x</li>
-                        <li class="letter" id="y">y</li>
-                        <li class="letter" id="z">z</li>
+                        <li id="letter" id="a">a</li>
+                        <li id="letter" id="b">b</li>   
+                        <li id="letter" id="c">c</li>                     
+                        <li id="letter" id="d">d</li>
+                        <li id="letter" id="e">e</li>
+                        <li id="letter" id="f">f</li>
+                        <li id="letter" id="g">g</li>
+                        <li id="letter" id="h">h</li>
+                        <li id="letter" id="i">i</li>
+                        <li id="letter" id="j">j</li>
+                        <li id="letter" id="k">k</li>
+                        <li id="letter" id="l">l</li>
+                        <li id="letter" id="m">m</li>
+                        <li id="letter" id="n">n</li>
+                        <li id="letter" id="o">o</li>
+                        <li id="letter" id="p">p</li>
+                        <li id="letter" id="q">q</li>
+                        <li id="letter" id="r">r</li>
+                        <li id="letter" id="s">s</li>
+                        <li id="letter" id="t">t</li>
+                        <li id="letter" id="u">u</li>
+                        <li id="letter" id="v">v</li>
+                        <li id="letter" id="w">w</li>
+                        <li id="letter" id="x">x</li>
+                        <li id="letter" id="y">y</li>
+                        <li id="letter" id="z">z</li>
                     </ul>
-                </div>  
+                </div>  -->
             </div>
             <div class="col-md-12 mainbox">
-                <h1>Take a Guess:</h1>
+                <h2 id="wordBlanks">_ _ _ _ _ _</h2>
+                <h1 id="guessed">Take a Guess: </h1>
+                <h2 id="letterGuesses">Letters you guessed:</h2>
                 <div class="col-md-12" id="gameScreen">   
                 </div>
-                <h2>You have 14 lives left!</h2>
-                <h3>Wins:</h3>
+                <h2 id="lives">You have 14 lives left!</h2>
+                <h3 id="wins">Wins:</h3>
+                <h3 id="losses">Losses:</h3>                
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="assets/javascript/game#3.js" ></script>
-    </body>
+    <script type="text/javascript" src="assets/javascript/game4.js"></script>
+ </body>
