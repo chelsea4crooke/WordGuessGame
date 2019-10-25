@@ -7,7 +7,7 @@ h1{
     padding-top: 80px;
     font-family: 'Permanent Marker', cursive;
     text-shadow: 4px 4px 8px red;
-    font-size: 28px;
+    font-size: 36px;
 }
 h2{
     text-align: center;
@@ -44,27 +44,6 @@ p{
     padding:0;
     max-width:900px;
   }
-  
-#alphabet li {
-    float:left;
-    margin: 0 10px 10px 0;
-    list-style:none;
-    width:35px;
-    height:30px;
-    padding-top:10px;
-    background:salmon;
-    color:whitesmoke;
-    cursor:pointer;
-    border: solid 1px whitesmoke;
-}    
-#alphabet li:hover {      
-     background: lightsalmon; 
-     border: solid 1px whitesmoke;
-     color: white;
-}
-#letter{
-    text-align: center;
-}
 #my-word {
     margin: 0;
     display: block;
@@ -82,4 +61,4 @@ p{
 }
 body {
     background: radial-gradient(circle, red, blue);
-  }
+}

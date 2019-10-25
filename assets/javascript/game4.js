@@ -1,4 +1,4 @@
-var wordList = ["wonder woman", "captain marvel", "supergirl", "scarlet itch", "storm", "mystique", "black widow", "batgirl", "killer frost"];
+var wordList = ["wonder woman", "captain marvel", "supergirl", "scarlet witch", "storm", "mystique", "black widow", "batgirl", "killer frost"];
 
 var chosenWord = " ";
 var lettersinWord = [];
@@ -35,6 +35,7 @@ function startGame(){
     document.getElementById("lives").innerHTML = numLives;
 
     document.getElementById("guessed").innerHTML = wrongGuess.join(" "); 
+
 }
 // To compare to matches//
 function checkLetters(letter){
