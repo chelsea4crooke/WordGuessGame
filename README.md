@@ -21,7 +21,7 @@ This is essentially a hangman game but better and themed. Guess all the letters 
 
 **Deployed Version Link:**
 
-(https://chelsea4crooke.github.io/WordGuessGame/)
+https://chelsea4crooke.github.io/WordGuessGame/
 
 **Technologies Used:**
 1. Html 
