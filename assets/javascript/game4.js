@@ -1,4 +1,4 @@
-var wordList = ["wonder woman", "captain marvel", "supergirl", "scarlet witch", "storm", "mystique", "black widow", "batgirl", "killer frost"];
+var wordList = ["wonderwoman", "captainmarvel", "supergirl", "scarletwitch", "storm", "mystique", "blackwidow", "batgirl", "killerfrost"];
 
 var chosenWord = " ";
 var lettersinWord = [];
