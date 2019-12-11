@@ -20,7 +20,6 @@ Press start to begin guessing which powerful lady super hero it is. You will hav
 This is essentially a hangman game but better and themed. Guess all the letters of the character being represented by "_"s and win the round. If you have no such luck, don't fear you can play again. There is a bank of 10 characters to keep you guessing.
 
 **Deployed Version Link:**
-
 [GitHub]:(https://chelsea4crooke.github.io/WordGuessGame/)
 
 **Technologies Used:**
